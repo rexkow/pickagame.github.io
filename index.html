@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -15,9 +15,7 @@
       --border: #e0e0e0;
     }
 
-    * {
-      box-sizing: border-box;
-    }
+    * { box-sizing: border-box; }
 
     body {
       margin: 0;
@@ -62,10 +60,6 @@
       font-size: 20px;
     }
 
-    ul {
-      padding-left: 18px;
-    }
-
     a {
       color: var(--accent);
       text-decoration: none;
@@ -75,27 +69,33 @@
       text-decoration: underline;
     }
 
-    .email {
-      font-weight: 500;
-    }
-
     footer {
       margin-top: 48px;
       font-size: 14px;
       color: var(--muted);
       text-align: center;
     }
+
+    .lang {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
   </style>
 </head>
 
 <body>
   <div class="container">
+
     <header>
       <h1>PickaGame</h1>
       <div class="subtitle">
-        Prosta aplikacja do losowania gier planszowych
+        Board game picker for groups
       </div>
     </header>
+
+    <!-- POLISH -->
+    <div class="lang">🇵🇱 Polski</div>
 
     <section class="card">
       <h2>O aplikacji</h2>
@@ -116,15 +116,40 @@
         Jeśli znalazłeś błąd lub masz pomysł na ulepszenie aplikacji,
         napisz na adres:
       </p>
-      <p class="email">
+      <p>
+        📧 <a href="mailto:pickagame.app@gmail.com">pickagame.app@gmail.com</a>
+      </p>
+    </section>
+
+    <!-- ENGLISH -->
+    <div class="lang">🇬🇧 English</div>
+
+    <section class="card">
+      <h2>About the app</h2>
+      <p>
+        PickaGame helps groups choose a board game by taking into account
+        player preferences, play history, and a controlled amount of randomness.
+      </p>
+      <p>
+        It is designed for board game meetups where deciding what to play
+        often takes longer than the game itself.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Bug reports & feedback</h2>
+      <p>
+        If you encounter a bug or have a suggestion, please contact us at:
+      </p>
+      <p>
         📧 <a href="mailto:pickagame.app@gmail.com">pickagame.app@gmail.com</a>
       </p>
     </section>
 
     <section class="card">
-      <h2>Źródła danych</h2>
+      <h2>Data sources</h2>
       <p>
-        Aplikacja korzysta z danych pochodzących z serwisu
+        This app uses data provided by
         <a href="https://boardgamegeek.com" target="_blank" rel="noopener">
           BoardGameGeek
         </a>.
