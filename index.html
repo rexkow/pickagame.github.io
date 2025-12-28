@@ -1,82 +1,138 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PickaGame</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
   <style>
+    :root {
+      --bg: #f4f6f8;
+      --card: #ffffff;
+      --text: #1c1c1c;
+      --muted: #666;
+      --accent: #2563eb;
+      --border: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #f6f7f8;
-      color: #222;
       margin: 0;
-      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, Oxygen, Ubuntu, Cantarell, "Helvetica Neue", Arial;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
     }
 
     .container {
       max-width: 720px;
       margin: 0 auto;
-      padding: 32px 20px;
+      padding: 24px 16px 48px;
+    }
+
+    header {
+      margin-bottom: 32px;
     }
 
     h1 {
-      font-size: 28px;
-      margin-bottom: 8px;
+      margin: 0 0 8px 0;
+      font-size: 32px;
+      letter-spacing: -0.5px;
     }
 
-    p {
-      line-height: 1.6;
+    .subtitle {
+      color: var(--muted);
+      font-size: 16px;
     }
 
     .card {
-      background: #fff;
+      background: var(--card);
+      border: 1px solid var(--border);
       border-radius: 12px;
       padding: 20px;
-      margin-top: 24px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    ul {
+      padding-left: 18px;
     }
 
     a {
-      color: #2563eb;
+      color: var(--accent);
       text-decoration: none;
-      font-weight: 500;
     }
 
     a:hover {
       text-decoration: underline;
     }
 
+    .email {
+      font-weight: 500;
+    }
+
     footer {
       margin-top: 48px;
-      font-size: 13px;
-      color: #666;
+      font-size: 14px;
+      color: var(--muted);
+      text-align: center;
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-    <h1>PickaGame</h1>
-    <p>
-      PickaGame is a mobile app that helps groups choose a board game in a fair
-      and fun way, based on players’ preferences and play history.
-    </p>
+    <header>
+      <h1>PickaGame</h1>
+      <div class="subtitle">
+        Prosta aplikacja do losowania gier planszowych
+      </div>
+    </header>
 
-    <div class="card">
-      <h2>Support & bug reports</h2>
+    <section class="card">
+      <h2>O aplikacji</h2>
       <p>
-        If you’ve found a bug, have a suggestion, or need help, please contact:
+        PickaGame pomaga wybrać grę planszową dla grupy graczy,
+        uwzględniając preferencje, historię rozgrywek oraz losowość.
       </p>
       <p>
-        📧 <strong>
-          <a href="mailto:pickagame.app@gmail.com">
-            pickagame.app@gmail.com
-          </a>
-        </strong>
+        Aplikacja została zaprojektowana z myślą o spotkaniach
+        planszówkowych, gdzie decyzja „w co gramy?” zajmuje więcej czasu
+        niż sama rozgrywka.
       </p>
-    </div>
+    </section>
+
+    <section class="card">
+      <h2>Zgłaszanie błędów i sugestii</h2>
+      <p>
+        Jeśli znalazłeś błąd lub masz pomysł na ulepszenie aplikacji,
+        napisz na adres:
+      </p>
+      <p class="email">
+        📧 <a href="mailto:pickagame.app@gmail.com">pickagame.app@gmail.com</a>
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Źródła danych</h2>
+      <p>
+        Aplikacja korzysta z danych pochodzących z serwisu
+        <a href="https://boardgamegeek.com" target="_blank" rel="noopener">
+          BoardGameGeek
+        </a>.
+      </p>
+    </section>
 
     <footer>
-      © PickaGame
+      © 2025 PickaGame
     </footer>
   </div>
 </body>
