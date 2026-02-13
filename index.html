@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pick a Game</title>
+  <link rel="icon" type="image/png" href="assets/icon.png">
+  <link rel="apple-touch-icon" href="assets/icon.png">
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -94,8 +96,26 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="py-8 text-center text-sm text-gray-500">
-  © 2026 Pick a Game • Data: BoardGameGeek
+<footer class="py-10 bg-gray-50 border-t">
+  <div class="max-w-6xl mx-auto px-6 text-center space-y-4">
+
+    <p class="text-sm text-gray-500">
+      © 2026 PickaGame
+    </p>
+
+    <div class="flex justify-center items-center gap-3">
+      <span class="text-sm text-gray-500">Powered by</span>
+      <a href="https://boardgamegeek.com"
+         target="_blank"
+         rel="noopener"
+         class="hover:opacity-80 transition">
+        <img src="assets/bgg.png"
+             alt="BoardGameGeek"
+             class="h-8 object-contain">
+      </a>
+    </div>
+
+  </div>
 </footer>
 
 </div>
