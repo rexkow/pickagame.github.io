@@ -131,22 +131,29 @@
 </section>
 
 <!-- FOOTER -->
-<footer class="py-10 bg-gray-50 border-t">
-  <div class="max-w-6xl mx-auto px-6 text-center space-y-4">
+<footer class="py-6 bg-gray-50 border-t">
+  <div class="max-w-6xl mx-auto px-6">
 
-    <p class="text-sm text-gray-500">
-      © 2026 PickaGame
-    </p>
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4">
 
-    <div class="flex justify-center items-center gap-3">
-      <a href="https://boardgamegeek.com"
-         target="_blank"
-         rel="noopener"
-         class="hover:opacity-80 transition">
-        <img src="assets/bgg.png"
-             alt="BoardGameGeek"
-             class="h-8 object-contain">
-      </a>
+      <!-- Powered by BGG -->
+      <div class="flex items-center gap-3">
+        <span class="text-sm text-gray-500">Powered by</span>
+        <a href="https://boardgamegeek.com"
+           target="_blank"
+           rel="noopener"
+           class="hover:opacity-80 transition">
+          <img src="assets/bgg.png"
+               alt="BoardGameGeek"
+               class="h-6 object-contain">
+        </a>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-sm text-gray-500">
+        © 2026 PickaGame
+      </div>
+
     </div>
 
   </div>
@@ -161,19 +168,18 @@ const translations = {
     nav_about: "About",
     nav_contact: "Contact",
 
-    hero_title: "Choose your next board game in seconds",
-    hero_sub: "Smart group-based selection with adaptive randomness that learns from past draws.",
+    hero_title: "Fair and efficient game selection for recurring game nights",
+    hero_sub: "A history-aware weighted draw system that reduces decision time and balances outcomes within your selected pool.",
 
-    features_title: "Why Pick a Game?",
-    feature1_title: "Preference-based selection",
-    feature1_desc: "Matches games to player preferences for optimal group satisfaction.",
-    feature3_title: "Smart randomness",
-    feature3_desc: "Adds controlled randomness to avoid repetitive choices.",
-    feature2_title: "Adaptive fairness algorithm",
-    feature2_desc: "Games that were unlucky in previous draws gradually gain higher probability, ensuring balanced rotation over time.",
+    feature1_title: "Reduce decision friction",
+    feature1_desc: "When multiple players have different preferences, reaching consensus can take time. PickaGame structures the process and moves the group toward a decision faster.",
+    feature2_title: "Go beyond the safest common choice",
+    feature2_desc: "Groups often default to games that are equally acceptable to everyone. Over time, this can limit overall satisfaction.",
+    feature3_title: "History-aware weighted draws",
+    feature3_desc: "Probability adjusts based on previous outcomes within the selected preference set. Games that repeatedly missed selection gradually gain weight, improving fairness over time.",
 
-    about_title: "About the App",
-    about_desc: "Pick a Game was created to solve the classic board game meetup problem: deciding what to play often takes longer than the game itself.",
+    about_title: "About PickaGame",
+    about_desc: "PickaGame is not a pure randomizer. It tracks previous draw outcomes and adapts probability within the currently selected game pool. The goal is long-term fairness and higher aggregate satisfaction, not just equal compromise."
 
     contact_title: "Feedback & Bug Reports",
     contact_desc: "Found a bug or have a suggestion? Get in touch."
@@ -184,20 +190,18 @@ const translations = {
     nav_about: "O aplikacji",
     nav_contact: "Kontakt",
 
-    hero_title: "Wybierz następną grę planszową w kilka sekund",
-    hero_sub: "Inteligentny wybór gry z adaptacyjną losowością, która uczy się na podstawie historii losowań.",
+    hero_title: "Sprawiedliwy i efektywny wybór gier na regularne spotkania",
+    hero_sub: "System losowania oparty na historii, który skraca czas decyzji i równoważy wyniki w ramach wybranej puli.",
 
-    features_title: "Dlaczego Pick a Game?",
-    feature1_title: "Wybór oparty na preferencjach",
-    feature1_desc: "Dopasowuje gry do preferencji graczy.",
-    feature3_title: "Kontrolowana losowość",
-    feature3_desc: "Zapobiega ciągłemu graniu w te same tytuły.",
-    feature2_title: "Adaptacyjny algorytm sprawiedliwości",
-    feature2_desc: "Gry, które miały pecha w poprzednich losowaniach, stopniowo zyskują większe szanse, zapewniając zrównoważoną rotację.",
+    feature1_title: "Mniej czasu na decyzję",
+    feature1_desc: "Gdy preferencje graczy się różnią, dojście do wspólnego wyboru potrafi się wydłużać. PickaGame porządkuje proces i przyspiesza decyzję.",
+    feature2_title: "Więcej niż najbezpieczniejszy kompromis",
+    feature2_desc: "Grupy często wybierają gry, które są po prostu akceptowalne dla wszystkich. W dłuższym okresie nie zawsze maksymalizuje to satysfakcję całej grupy.",
+    feature3_title: "Losowanie ważone historią",
+    feature3_desc: "Prawdopodobieństwo dostosowuje się na podstawie wcześniejszych wyników w obrębie wybranej puli. Gry, które wielokrotnie nie zostały wylosowane, stopniowo zyskują większą wagę.",
 
-    about_title: "O aplikacji",
-    about_desc: "Pick a Game powstał, aby rozwiązać problem spotkań planszówkowych: decyzja 'w co gramy?' często trwa dłużej niż sama rozgrywka.",
-
+    about_title: "O PickaGame",
+    about_desc: "PickaGame to coś więcej niż zwykłe losowanie. Aplikacja analizuje wcześniejsze wyniki i dynamicznie dostosowuje prawdopodobieństwa w ramach aktualnie wybranych gier. Celem jest długoterminowa sprawiedliwość i wyższa łączna satysfakcja grupy, a nie jedynie kompromis."
     contact_title: "Zgłaszanie błędów i sugestii",
     contact_desc: "Znalazłeś błąd lub masz pomysł? Napisz do nas."
   }
