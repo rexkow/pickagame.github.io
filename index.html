@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pick a Game</title>
+  <title>Pick a Game – Board Game Selection App</title>
+  <meta name="description" content="Pick a Game is a board game selection app that uses weighted draws based on past results to help groups choose what to play.">
   <link rel="icon" type="image/png" href="assets/icon.png">
   <link rel="apple-touch-icon" href="assets/icon.png">
   <script src="https://cdn.tailwindcss.com"></script>
@@ -150,7 +151,7 @@
 
       <!-- Copyright -->
       <div class="text-sm text-gray-500">
-        © 2026 PickaGame
+        © 2026 Pick a Game
       </div>
 
     </div>
@@ -163,46 +164,51 @@
 <script>
 const translations = {
   en: {
-    nav_features: "Features",
+    nav_features: "How it works",
     nav_about: "About",
     nav_contact: "Contact",
 
-    hero_title: "Fair and efficient game selection for recurring game nights",
-    hero_sub: "A history-aware weighted draw system that reduces decision time and balances outcomes within your selected pool.",
+    hero_title: "A smarter way to choose board games",
+    hero_sub: "Pick a Game helps board game groups spend less time deciding and more time playing — using weighted draws based on past results.",
 
-    feature1_title: "Reduce decision friction",
-    feature1_desc: "When multiple players have different preferences, reaching consensus can take time. Pick a Game structures the process and moves the group toward a decision faster.",
-    feature2_title: "Go beyond the safest common choice",
-    feature2_desc: "Groups often default to games that are equally acceptable to everyone. Over time, this can limit overall satisfaction.",
-    feature3_title: "History-aware weighted draws",
-    feature3_desc: "Probability adjusts based on previous outcomes within the selected preference set. Games that repeatedly missed selection gradually gain weight, improving fairness over time.",
+    feature1_title: "Less time deciding",
+    feature1_desc: "Choosing a board game can easily take longer than setting it up. Pick a Game narrows the options based on player preferences and moves the group toward a decision faster.",
+
+    feature2_title: "More than the safest compromise",
+    feature2_desc: "Board game groups often default to titles that are \"fine for everyone\". Over time, that doesn’t always mean the highest overall enjoyment.",
+
+    feature3_title: "Weighted board game draws",
+    feature3_desc: "Within the selected preference pool, probability adjusts based on previous results. Board games that repeatedly missed selection slowly gain weight, helping balance outcomes over time — without removing randomness.",
 
     about_title: "About Pick a Game",
-    about_desc: "Pick a Game is not a pure randomizer. It tracks previous draw outcomes and adapts probability within the currently selected game pool. The goal is long-term fairness and higher aggregate satisfaction, not just equal compromise.",
+    about_desc: "Pick a Game is a hobby project built for board game groups that meet regularly. It’s not a pure randomizer. The app tracks past draw results and adjusts probabilities within the currently selected board games. The goal is simple: reduce friction, avoid repetitive compromises, and keep decisions feeling fair over time.",
 
     contact_title: "Feedback & Bug Reports",
-    contact_desc: "Found a bug or have a suggestion? Get in touch."
+    contact_desc: "Have feedback, found a bug, or want to suggest an improvement? Send a message."
   },
 
   pl: {
-    nav_features: "Funkcje",
+    nav_features: "Jak to działa",
     nav_about: "O aplikacji",
     nav_contact: "Kontakt",
 
-    hero_title: "Sprawiedliwy i efektywny wybór gier na regularne spotkania",
-    hero_sub: "System losowania oparty na historii, który skraca czas decyzji i równoważy wyniki w ramach wybranej puli.",
+    hero_title: "Sprytniejszy sposób na wybór gier planszowych",
+    hero_sub: "Pick a Game pomaga grupom planszówkowym spędzać mniej czasu na decyzjach, a więcej na graniu — wykorzystując losowanie ważone historią.",
 
-    feature1_title: "Mniej czasu na decyzję",
-    feature1_desc: "Gdy preferencje graczy się różnią, dojście do wspólnego wyboru potrafi się wydłużać. Pick a Game porządkuje proces i przyspiesza decyzję.",
+    feature1_title: "Mniej czasu na wybór",
+    feature1_desc: "Wybór gry planszowej potrafi trwać dłużej niż jej rozłożenie. Pick a Game zawęża pulę na podstawie preferencji graczy i przyspiesza podjęcie decyzji.",
+
     feature2_title: "Więcej niż najbezpieczniejszy kompromis",
-    feature2_desc: "Grupy często wybierają gry, które są po prostu akceptowalne dla wszystkich. W dłuższym okresie nie zawsze maksymalizuje to satysfakcję całej grupy.",
-    feature3_title: "Losowanie ważone historią",
-    feature3_desc: "Prawdopodobieństwo dostosowuje się na podstawie wcześniejszych wyników w obrębie wybranej puli. Gry, które wielokrotnie nie zostały wylosowane, stopniowo zyskują większą wagę.",
+    feature2_desc: "Grupy planszówkowe często wracają do tytułów, które są \"w porządku dla wszystkich\". W dłuższym okresie nie zawsze oznacza to najwyższą satysfakcję.",
+
+    feature3_title: "Losowanie ważone gier planszowych",
+    feature3_desc: "W obrębie wybranej puli preferencji prawdopodobieństwo dostosowuje się na podstawie wcześniejszych wyników. Gry planszowe, które wielokrotnie nie zostały wylosowane, stopniowo zyskują większą wagę — zachowując element losowości.",
 
     about_title: "O Pick a Game",
-    about_desc: "Pick a Game to coś więcej niż zwykłe losowanie. Aplikacja analizuje wcześniejsze wyniki i dynamicznie dostosowuje prawdopodobieństwa w ramach aktualnie wybranych gier. Celem jest długoterminowa sprawiedliwość i wyższa łączna satysfakcja grupy, a nie jedynie kompromis.",
+    about_desc: "Pick a Game to hobbystyczny projekt stworzony dla grup, które regularnie grają w gry planszowe. To nie jest zwykły randomizer. Aplikacja analizuje historię losowań i dostosowuje prawdopodobieństwa w ramach aktualnie wybranych gier planszowych. Celem jest mniej tarcia przy decyzji, mniej powtarzalnych kompromisów i większe poczucie sprawiedliwości w dłuższym okresie.",
+
     contact_title: "Zgłaszanie błędów i sugestii",
-    contact_desc: "Znalazłeś błąd lub masz pomysł? Napisz do nas."
+    contact_desc: "Masz sugestię, znalazłeś błąd lub chcesz coś ulepszyć? Napisz wiadomość."
   }
 };
 
