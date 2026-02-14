@@ -113,10 +113,38 @@
 </section>
 
 <!-- ABOUT -->
-<section id="about" class="py-16">
-  <div class="max-w-3xl mx-auto px-6 text-center">
-    <h2 class="text-3xl font-bold mb-6" data-i18n="about_title"></h2>
-    <p class="text-gray-600" data-i18n="about_desc"></p>
+<section id="about" class="py-24 bg-gray-50">
+  <div class="max-w-4xl mx-auto px-6">
+
+    <div class="bg-white rounded-2xl shadow-sm border p-8 md:p-12 space-y-8">
+
+      <h2 class="text-3xl md:text-4xl font-bold text-center"
+          data-i18n="about_title"></h2>
+
+      <div class="space-y-6 text-gray-700 leading-relaxed text-sm md:text-base">
+
+        <p data-i18n="about_intro"></p>
+
+        <h3 class="text-xl font-semibold mt-6"
+            data-i18n="about_algo_title"></h3>
+        <p data-i18n="about_algo_desc"></p>
+
+        <h3 class="text-xl font-semibold mt-6"
+            data-i18n="about_bgg_title"></h3>
+        <p data-i18n="about_bgg_desc"></p>
+
+        <h3 class="text-xl font-semibold mt-6"
+            data-i18n="about_advanced_title"></h3>
+        <p data-i18n="about_advanced_desc"></p>
+
+        <h3 class="text-xl font-semibold mt-6"
+            data-i18n="about_data_title"></h3>
+        <p data-i18n="about_data_desc"></p>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
 
@@ -165,7 +193,7 @@
 const translations = {
   en: {
     nav_features: "How it works",
-    nav_about: "About",
+    nav_about: "Under the hood",
     nav_contact: "Contact",
 
     hero_title: "A smarter way to choose board games",
@@ -178,37 +206,63 @@ const translations = {
     feature2_desc: "Board game groups often default to titles that are \"fine for everyone\". Over time, that doesn’t always mean the highest overall enjoyment.",
 
     feature3_title: "Weighted board game draws",
-    feature3_desc: "Within the selected preference pool, probability adjusts based on previous results. Board games that repeatedly missed selection slowly gain weight, helping balance outcomes over time — without removing randomness.",
+    feature3_desc: "Within the selected preference pool, probability adjusts based on previous results. Board games that repeatedly missed selection slowly gain weight — without removing randomness.",
 
-    about_title: "About Pick a Game",
-    about_desc: "Pick a Game is a hobby project built for board game groups that meet regularly. It’s not a pure randomizer. The app tracks past draw results and adjusts probabilities within the currently selected board games. The goal is simple: reduce friction, avoid repetitive compromises, and keep decisions feeling fair over time.",
+    about_title: "Under the hood",
+
+    about_intro: "Pick a Game is a hobby project built for board game groups that meet regularly. It’s not a pure randomizer — the draw system adapts over time.",
+
+    about_algo_title: "How the weighted draw works",
+    about_algo_desc: "Each draw distributes a total of 10 points across player preferences (5 / players for first choice, 3 / players for second, 2 / players for third). Historical points from previous draws are added for the currently selected board games. A weighted random draw is performed, 10 points are subtracted from the selected game, and updated values are saved for future draws.",
+
+    about_bgg_title: "BoardGameGeek integration",
+    about_bgg_desc: "Every board game is identified by its BoardGameGeek ID to avoid confusion between editions and languages. The search first checks a local database of several thousand popular board games (English titles). If needed, it queries BoardGameGeek directly. Results are sorted by BGG rank. Only board games listed on BGG can currently be used.",
+
+    about_advanced_title: "Advanced options",
+    about_advanced_desc: "Players can use Veto (block one title for the current draw) or Prefer Not (reduce a title’s weight without removing it entirely). These tools allow stronger preferences to be expressed without breaking the system.",
+
+    about_data_title: "Meeting history & export",
+    about_data_desc: "Draw history is essential to the system. Pick a Game allows exporting and importing data so accumulated history can be preserved across devices.",
 
     contact_title: "Feedback & Bug Reports",
-    contact_desc: "Have feedback, found a bug, or want to suggest an improvement? Send a message."
+    contact_desc: "Have feedback or found a bug? Send a message."
   },
 
   pl: {
     nav_features: "Jak to działa",
-    nav_about: "O aplikacji",
+    nav_about: "Pod maską",
     nav_contact: "Kontakt",
 
     hero_title: "Sprytniejszy sposób na wybór gier planszowych",
     hero_sub: "Pick a Game pomaga grupom planszówkowym spędzać mniej czasu na decyzjach, a więcej na graniu — wykorzystując losowanie ważone historią.",
 
     feature1_title: "Mniej czasu na wybór",
-    feature1_desc: "Wybór gry planszowej potrafi trwać dłużej niż jej rozłożenie. Pick a Game zawęża pulę na podstawie preferencji graczy i przyspiesza podjęcie decyzji.",
+    feature1_desc: "Wybór gry planszowej potrafi trwać dłużej niż jej rozłożenie. Pick a Game zawęża pulę na podstawie preferencji graczy i przyspiesza decyzję.",
 
     feature2_title: "Więcej niż najbezpieczniejszy kompromis",
-    feature2_desc: "Grupy planszówkowe często wracają do tytułów, które są \"w porządku dla wszystkich\". W dłuższym okresie nie zawsze oznacza to najwyższą satysfakcję.",
+    feature2_desc: "Grupy planszówkowe często wracają do tytułów, które są „w porządku dla wszystkich”. W dłuższym okresie nie zawsze oznacza to najwyższą satysfakcję.",
 
     feature3_title: "Losowanie ważone gier planszowych",
-    feature3_desc: "W obrębie wybranej puli preferencji prawdopodobieństwo dostosowuje się na podstawie wcześniejszych wyników. Gry planszowe, które wielokrotnie nie zostały wylosowane, stopniowo zyskują większą wagę — zachowując element losowości.",
+    feature3_desc: "W obrębie wybranej puli prawdopodobieństwo dostosowuje się na podstawie wcześniejszych wyników. Gry planszowe, które nie zostały wylosowane, stopniowo zyskują większą wagę.",
 
-    about_title: "O Pick a Game",
-    about_desc: "Pick a Game to hobbystyczny projekt stworzony dla grup, które regularnie grają w gry planszowe. To nie jest zwykły randomizer. Aplikacja analizuje historię losowań i dostosowuje prawdopodobieństwa w ramach aktualnie wybranych gier planszowych. Celem jest mniej tarcia przy decyzji, mniej powtarzalnych kompromisów i większe poczucie sprawiedliwości w dłuższym okresie.",
+    about_title: "Pod maską",
+
+    about_intro: "Pick a Game to hobbystyczny projekt dla grup regularnie grających w gry planszowe. To nie jest zwykły randomizer — system losowania dostosowuje się w czasie.",
+
+    about_algo_title: "Jak działa losowanie ważone",
+    about_algo_desc: "W każdym losowaniu rozdzielanych jest łącznie 10 punktów (5 / liczba graczy za pierwszy wybór, 3 / liczba graczy za drugi, 2 / liczba graczy za trzeci). Do punktów dodawane są wartości z wcześniejszych losowań dla aktualnie wybranych gier planszowych. Następnie wykonywane jest losowanie ważone, 10 punktów odejmowane jest zwycięskiej grze, a nowe wartości są zapisywane.",
+
+    about_bgg_title: "Integracja z BoardGameGeek",
+    about_bgg_desc: "Każda gra planszowa identyfikowana jest poprzez BGG ID, co eliminuje problem różnych edycji i wersji językowych. Wyszukiwanie najpierw korzysta z lokalnej bazy kilku tysięcy popularnych gier planszowych (tytuły w języku angielskim). Jeśli to nie wystarczy, aplikacja przeszukuje bezpośrednio bazę BoardGameGeek. Wyniki sortowane są według rankingu BGG. Obecnie można używać tylko gier posiadających wpis w BGG.",
+
+    about_advanced_title: "Opcje zaawansowane",
+    about_advanced_desc: "Dostępne są opcje Weto (blokuje jedną grę w bieżącym losowaniu) oraz Wolę nie (zmniejsza wagę wybranego tytułu). Pozwala to wyrazić silniejsze preferencje bez rozbijania systemu.",
+
+    about_data_title: "Historia spotkań i eksport danych",
+    about_data_desc: "Historia losowań jest kluczowa dla działania algorytmu. Aplikacja umożliwia eksport i import danych, dzięki czemu można przenieść zgromadzoną historię na nowe urządzenie.",
 
     contact_title: "Zgłaszanie błędów i sugestii",
-    contact_desc: "Masz sugestię, znalazłeś błąd lub chcesz coś ulepszyć? Napisz wiadomość."
+    contact_desc: "Masz sugestię lub znalazłeś błąd? Napisz wiadomość."
   }
 };
 
